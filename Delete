@@ -5,14 +5,14 @@ public class Delete {
 	public void start(Stage primaryStage) {
 	this.primaryStage = primaryStage;
 		
-	primaryStage.setTitle("Slet ven");
+	primaryStage.setTitle("Slet Hold");
 	GridPane grid = new GridPane();
 	grid.setAlignment(Pos.CENTER);
 	grid.setHgap(10);
 	grid.setVgap(10);
 	grid.setPadding(new Insets(50, 50, 50, 50));
 
-	Text scenetitle = new Text("Slet ven");
+	Text scenetitle = new Text("Slet Hold");
 	scenetitle.setFont(Font.font("Calibri", FontWeight.NORMAL, 30));
 	grid.add(scenetitle, 0, 0, 2, 1);
 	
