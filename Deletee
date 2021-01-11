@@ -1,0 +1,41 @@
+public class Delete {
+	
+	private Stage primaryStage;
+
+	public void start(Stage primaryStage) {
+	this.primaryStage = primaryStage;
+		
+	primaryStage.setTitle("Slet ven");
+	GridPane grid = new GridPane();
+	grid.setAlignment(Pos.CENTER);
+	grid.setHgap(10);
+	grid.setVgap(10);
+	grid.setPadding(new Insets(50, 50, 50, 50));
+
+	Text scenetitle = new Text("Slet ven");
+	scenetitle.setFont(Font.font("Calibri", FontWeight.NORMAL, 30));
+	grid.add(scenetitle, 0, 0, 2, 1);
+	
+
+			
+	Scene scene = new Scene(grid, 700, 600);
+	primaryStage.setScene(scene);
+	primaryStage.show();
+	
+	
+	
+	// back Knap
+	Button back = new Button("Tilbage");
+	back.setFont(Font.font("Calibri", FontWeight.NORMAL, 20));
+	HBox hbBack = new HBox(10);
+	hbBack.setAlignment(Pos.BOTTOM_RIGHT);
+	hbBack.getChildren().add(back);
+	grid.add(hbBack, 20, 30);
+	back.setOnAction(e -> back()); 
+	}
+	
+	private void back() {
+		Menu back = new Menu();
+		back.start(primaryStage);
+	}
+}
